@@ -1,0 +1,14 @@
+python run_mlm.py \
+    --model_name_or_path bert-base-multilingual-cased \
+    --train_file data/en_ewt-ud-train.txt \
+    --validation_file data/en_ewt-ud-dev.txt \
+    --per_device_train_batch_size 8 \
+    --per_device_eval_batch_size 8 \
+    --do_train \
+    --do_eval \
+    --num_train_epochs 10 \
+    --learning_rate 1e-4 \
+    --train_adapter \
+    --adapter_config "pfeiffer+inv" \
+    --output_dir ./output/adapter_en \
+    --overwrite_output_dir

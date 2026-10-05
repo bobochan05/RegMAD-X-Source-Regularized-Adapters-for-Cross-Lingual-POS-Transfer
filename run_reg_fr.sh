@@ -1,0 +1,17 @@
+python run_mlm_reg.py \
+    --model_name_or_path bert-base-multilingual-cased \
+    --train_file data/fr_gsd-ud-train.txt \
+    --validation_file data/fr_gsd-ud-dev.txt \
+    --per_device_train_batch_size 8 \
+    --per_device_eval_batch_size 2 \
+    --do_train \
+    --do_eval \
+    --num_train_epochs 10 \
+    --learning_rate 1e-4 \
+    --train_adapter \
+    --adapter_config "pfeiffer+inv" \
+    --load_adapter ./output/adapter_en/mlm \
+    --reg_lambda 0.1 \
+    --output_dir ./output/adapter_fr_reg \
+    --overwrite_output_dir \
+    --dataloader_num_workers 0

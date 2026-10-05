@@ -1,0 +1,18 @@
+# Ignore model weights and adapters
+output/
+task_output*/
+temp_sweep*/
+
+# Ignore datasets
+data/
+*.conllu
+*.txt
+*.csv
+
+# Ignore logs
+logs*/
+nohup.out
+
+# Python cache
+__pycache__/
+*.pyc
