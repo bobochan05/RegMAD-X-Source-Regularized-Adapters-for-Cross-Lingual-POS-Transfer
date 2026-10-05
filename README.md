@@ -1,4 +1,4 @@
-# RegMAD-X: Source-Regularized Adapters for Cross-Lingual POS Transfer
+# RegMAD-X — Source-Regularized Adapters for Cross-Lingual POS Transfer
 
 RegMAD-X is an experimental implementation of source-informed L2 regularization for **MAD-X-style language adapters**. It investigates whether keeping a target-language adapter close to an English adapter during language-adaptive fine-tuning (LAFT) improves **English-to-target zero-shot Universal POS tagging**.
 
@@ -45,9 +45,12 @@ The reported Hindi sweep selected $\lambda = 0.001$. The standalone regularized 
 - A CUDA-capable PyTorch installation for the supplied training configuration
 - A Linux or WSL shell to run the `.sh` launchers
 
-Create and activate an environment, install the CUDA build of PyTorch appropriate for your system, then install the Python dependencies:
+Clone the repository, create and activate an environment, install the CUDA build of PyTorch appropriate for your system, then install the Python dependencies:
 
 ```bash
+git clone https://github.com/boboChan05/RegMAD-X-Source-Regularized-Adapters-for-Cross-Lingual-POS-Transfer.git
+cd RegMAD-X-Source-Regularized-Adapters-for-Cross-Lingual-POS-Transfer
+
 pip install adapters datasets evaluate conllu seqeval scikit-learn pandas matplotlib seaborn
 ```
 
